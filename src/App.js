@@ -34,7 +34,7 @@ function App() {
           setCtask(ctask.filter((item) => item.id !== id))
         }
       }
-
+      return null
     })
   }
 
@@ -44,6 +44,7 @@ function App() {
         setdtask([...dtask,obj])
         setToDos(toDos.filter((obj2) => obj2.id !== id))
       }
+      return null
     })
   }
 
@@ -51,9 +52,9 @@ function App() {
     dtask.map((obj)=>{
       if(obj.id===id){
         setToDos([...toDos,obj])
-        setdtask(dtask.filter((obj2=> obj2.id != id)))
+        setdtask(dtask.filter((obj2=> obj2.id !== id)))
       }
-
+      return null
     })
   }
 
@@ -105,10 +106,10 @@ function App() {
                         <div className="finishStyle m-4">
                           <h6 className='text-white'>{obj.text}</h6>
                           <button onClick={()=> restoreTask(obj.id)} className='restoreBtn btn btn-primary'>restore</button>
-                        </div>
-
+                        </div>  
                       )
                     }
+                    return null
                   })
                 }
               </div>
