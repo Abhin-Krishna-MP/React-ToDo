@@ -75,17 +75,17 @@ function App() {
         <div className="container">
           <div className="row p-4">
             <div className="col-md-4">
-              <div className="CreatetoDo m-1">
+              <div className="CreatetoDo p-4 m-1">
                 <h4 className="text-white mb-4">Create task</h4>
                 <hr className='text-white' />
-                <div className="createStyle">
+                <div className="createStyle ">
                   <input className='Inputstyle text-white' value={toDo} onChange={(e) => { setToDo(e.target.value) }} placeholder='Create toDo...' type="text" />
                   <button onClick={() => { setToDos([...toDos, { id: Date.now(),text: toDo, status: false }]) }} className='btn btn-success ms-3'>+</button>
                 </div>
                 {
                   toDos.map((obj) => {
                     return (
-                      <div className="todotiles p-4 mt-4">
+                      <div className="todotiles p-3 mt-4">
                         <input type="checkbox" checked={obj.status} onChange={() => Transfer(obj.id)} className='CheckboxStyle' />
                         <h6 className='text-white'>{obj.text}</h6>
                         <button onClick= {() => {DeleteTask(obj.id)}} className='btn btn-danger '>delete</button>
@@ -103,7 +103,7 @@ function App() {
                   ctask.map((obj) => {
                     if (obj.status) {
                       return (
-                        <div className="finishStyle m-4">
+                        <div className="finishStyle p-3 m-4">
                           <h6 className='text-white'>{obj.text}</h6>
                           <button onClick={()=> restoreTask(obj.id)} className='restoreBtn btn btn-primary'>restore</button>
                         </div>  
@@ -121,7 +121,7 @@ function App() {
                 {
                   dtask.map((obj) => {
                       return (
-                        <div className="Deleted-task m-4">
+                        <div className="Deleted-task p-4 m-4">
                           <h6 className='text-white'>{obj.text}</h6>
                           <button onClick={()=> restoredTask(obj.id)} className='restoreBtn btn btn-primary'>restore</button>
                         </div>
