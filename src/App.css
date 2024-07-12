@@ -62,4 +62,31 @@ body{
   padding: 10px;
   border: 2px solid  #00ff00;
   box-shadow: 0 0 10px #00ff00 inset;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.restoreBtn{
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  margin-left: 20px;
+}
+
+.Deleted{
+  background-color: #333;
+  border-radius: 50px;
+  border: 2px solid  #ff0011;
+  box-shadow: 0 0 10px #ff0011 inset;
+}
+
+.Deleted-task{
+  background-color: #333;
+  border-radius: 50px;
+  padding: 10px;
+  border: 2px solid  #ff0011;
+  box-shadow: 0 0 10px #ff0011 inset;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
